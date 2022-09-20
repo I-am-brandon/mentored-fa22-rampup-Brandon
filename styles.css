@@ -2,33 +2,229 @@
 .flex-container {
     /* to use flexbox, must have the display:flex line */
     display:flex;
-    flex-direction:row-reverse;
+    flex-direction: column;
+    align-items: center;
 
 }
+.flex-cont2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*stuff i just added  */
+
+body {
+    font-family: "Poppins", sans-serif;
+    /*text-align: center; /*this is where I added to center for buttons*/
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.gallery {
+    flex-direction: column;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+
+.navlist {
+    display: flex;
+    margin-right: 2em;
+}
+.navlist {
+    flex-direction: row;
+    padding: em 0;
+    position: absolute;
+    left: 58%;
+    top: 1em;
+    font-size: 1.30rem;
+    /*margin-right: 4em;*/
+}
+
+.navlistitem {
+    margin-left: 1.5em;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+    min-height: 200px;
+}
+
+.flexbox-item-1 {
+    min-height: 200px;
+}
+.flexbox-item-2 {
+    min-height: 200px;
+}
+.flexbox-item-3 {
+    min-height: 200px;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.sectiontitle {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.sectionitem{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contact {
+    flex-direction: column;
+}
+
+/*stuff i just added  */
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ncontainer{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-1{
+    margin: 0 50px;
+    cursor: pointer;
+    height: 80px;
+    width: 200px;
+    border-color: black;
+    color:rgb(255, 255, 255);
+    background-color: rgb(105, 156, 123);
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 0 rgb(0, 0, 0);
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+}
+
+.btn-1:hover{
+    box-shadow: inset 300px 0 0 0 rgb(54, 103, 80);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.btn-2{
+    margin: 0 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    border: px;
+    border-color: rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    background-color: rgb(92, 161, 109);
+    border-radius:5px;
+    box-shadow: inset 0 0 0 0 rgb(0, 0, 0);
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-2:hover{
+    box-shadow: inset 300px 0 0 0 rgb(36, 69, 61);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.btn-3{
+    margin: 0 5px;
+    margin-top: 24px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    background-color: rgb(92, 161, 109);
+    border-radius:5px;
+    box-shadow: inset 0 0 0 0 rgb(0, 0, 0);
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-3:hover{
+    box-shadow: inset 300px 0 0 0 rgb(36, 69, 61);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+
+
+.imagebutton{
+  }
 
 .form {
     margin: 15px;
+}
+
+ul{
+    list-style: none;
 }
 
 .image {
     display:flex;
     flex-wrap:wrap;
     border-radius: 8px;
-    width: 20vw;
-    height: 10vw;
+    width: auto;
+    height: auto;
 }
 
+
+
 .button {
+    cursor: pointer;
     background-color: aliceblue;
     outline: black;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width:10vw;
     margin: 20px;
 }
 
 .text{
-    color:red;
-    font-family: 'Courier New', Courier, monospace;
+    color:black;
+    font-family: "Poppins", sans-serif;;
+    font-size: 1.3rem;
+    flex-direction: column;
 }
 
 /* #name to define css of ids */
