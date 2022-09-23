@@ -1,23 +1,29 @@
 /* .name to define css of classes */
 .flex-container {
     /* to use flexbox, must have the display:flex line */
+    background-color: rgb(255, 255, 255);
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 5%;
+    margin-left: 5%;
 
 }
 .flex-cont2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /*stuff i just added  */
 
 body {
     font-family: "Poppins", sans-serif;
+    background-color:  #563c14;
     /*text-align: center; /*this is where I added to center for buttons*/
-    text-align: center;
+    /* text-align: center; */
 }
 
 .center {
@@ -33,10 +39,14 @@ body {
 
 .about{
     display: flex;
+    text-align: center;
+    margin: auto;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* width: 50%; */
     
 }
 
@@ -49,19 +59,40 @@ body {
     flex-direction: row;
     padding: em 0;
     position: absolute;
-    left: 58%;
-    top: 1em;
+    left: 64%;
+    top: 4em;
+    font-size: 1.30rem;
+}
+
+.navlist2 {
+    display: flex;
+    margin-right: 2em;
+}
+.navlist2 { 
+    flex-direction: row;
+    padding: em 0;
+    position: absolute;
+    right: 64%;
+    top: 4em;
     font-size: 1.30rem;
     /*margin-right: 4em;*/
+}
+
+.navlistitem2 {
+    /* makes the margins between one item from the other like space in between larger */
+    margin-left: 1.5em; 
 }
 
 .navlistitem {
     margin-left: 1.5em;
 }
 
+
 h1 {
     font-size: 4rem;
+    color:  white;
 }
+
 
 .flexbox-item {
     width: 200px;
@@ -147,6 +178,7 @@ h1 {
 .btn-2{
     margin: 0 50px;
     margin-top: 20px;
+    margin-bottom: 20px;
     cursor: pointer;
     width: 200px;
     height: 60px;
@@ -168,7 +200,7 @@ h1 {
 }
 
 .btn-3{
-    margin: 0 5px;
+    margin: 5 0px;
     margin-top: 24px;
     cursor: pointer;
     width: 150px;
@@ -190,9 +222,28 @@ h1 {
 }
 
 
+.btn-4{
+    margin: 0 5px;
+    margin-top: 24px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    background-color: rgb(92, 161, 109);
+    border-radius:5px;
+    box-shadow: inset 0 0 0 0 rgb(0, 0, 0);
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+}
 
-.imagebutton{
-  }
+.btn-4:hover{
+    box-shadow: inset 300px 0 0 0 rgb(36, 69, 61);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
 
 .form {
     margin: 15px;
@@ -206,11 +257,17 @@ ul{
     display:flex;
     flex-wrap:wrap;
     border-radius: 8px;
+    width: 300px;
+    height: 250px;
+}
+
+.fullimage {
+    display:flex;
+    flex-wrap:wrap;
+    border-radius: 8px;
     width: auto;
     height: auto;
 }
-
-
 
 .button {
     cursor: pointer;
@@ -221,13 +278,98 @@ ul{
 }
 
 .text{
-    color:black;
+    color:rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     flex-direction: column;
+    text-decoration: underline;
 }
 
-/* #name to define css of ids */
+#name to define css of ids
 #iframe {
     width:50vw;
 }
+
+ * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.bodygame {
+    height: 100vh;
+    display: flex;
+    /* flex allows us to use any flex attricbutes on teh stuff inside body */
+    background-color: #563c14;
+    margin-top: 1%;
+
+}
+
+
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    margin-top: 10%;
+    /* margin-bottom: 30%; */
+    display: flex; 
+    /* flex has default conditions that we probably need to rest, look up defaults.  */
+    flex-wrap: wrap;
+    border: 2px solid tan;
+    perspective:1000px ;
+    /* margin: 0 5; */
+  }
+  
+  .memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    /* ^means that the child class will be positioned relative to this memory card class */
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  }
+  
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+
+  .memory-card.flip{
+    /* when flip class is present then we rotate */
+    transform: rotateY(180deg);
+
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    position: absolute;
+    border-radius: 5px;
+    background: #b59034;
+    backface-visibility: hidden;
+  }
+
+  .front-face{
+    transform: rotateY(180deg);
+  }
+ 
+
+  
+/* img {
+    width: 100px;
+
+} */
+
+
+
+
+
+
+
