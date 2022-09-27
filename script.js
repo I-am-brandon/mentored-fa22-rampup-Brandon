@@ -33,7 +33,21 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let firstCard, secondCard
 
+
+// let popup = document.getElementById("popup"); 
+
+
+// function closePopup(){
+//   popup.classList.remove("open-popup");
+// } 
+ 
+function closePopup(){
+     popup.classList.remove("open-popup");
+   } 
+
+
 function flipCard(){
+
 
   // this is accessing the classlist of the memeory card and toggling the flip class, meaning if class there remove if not then add it/
   //turns on and off a separate(flip in this case) class within the memory-card class  
@@ -46,24 +60,61 @@ function flipCard(){
   console.log({hasFlippedCard,firstCard});
   }
   else {
+    // let popup = document.getElementById("popup1"); 
+    let popup = document.getElementById("popup"); 
+    // let popup2 = document.getElementById("popup2"); 
+    // let popup = document.getElementById("popup3"); 
+    // let popup4 = document.getElementById("popup4"); 
+    // let popup5 = document.getElementById("popup5"); 
+    // let popup6 = document.getElementById("popup6"); 
+
+
+
+
+
     //means were on second card flip
     hasFlippedCard = false;
     secondCard = this;
     console.log({hasFlippedCard,firstCard});
 
+
+
+    // function openPopup(){ 
+    //   popup.classList.add("open-popup"); 
+    // }
+
+
+
     // // we put the card and gave it the identifier data-(the name we wanted which i said name) and we access it usi g dataset.
     // console.log(firstCard.dataset.name); 
     // console.log(secondCard.dataset.name); 
     if (firstCard.dataset.name === secondCard.dataset.name){
+
+      function openPopup(){ 
+        popup.classList.add("open-popup"); 
+      }
+  
       //if its a match we disable the event listener of being able to click it .  on click remove eventlistener for fucntion flipcard
 
       firstCard.removeEventListener('click',flipCard);
       secondCard.removeEventListener('click',flipCard);
       setTimeout(()=> {
-      if (firstCard.dataset.name === "P1"){
+      if (firstCard.dataset.name === "P2"){
+        openPopup()
+
+          // popup.classList.add("open-popup"); 
+
+
+          // popup.classList.remove("open-popup");
+
+        // }
+        // function closePopup(){
+        //   popup.classList.remove("open-popup");
+        // }
+
         alert("Congrats! You've discovered my first ever drawing made completeley in pen. This one took an entire summer and was such a mess. Goodluck finding all the rest! Made June 2021       FunFact: Art used to be an Olympic event!");
       }
-      if (firstCard.dataset.name === "P2"){
+      if (firstCard.dataset.name === "P1"){
         alert("Congrats! Okay so this one isn't only made in pen. It was the first time I really tried to combine both pen and charcoal and I think it came out alright! Made May 2021         FunFact: The Mona Lisa has her own mailbox in the Louvre because of all the love letters she receives.");
       }
       if (firstCard.dataset.name === "C1"){
@@ -105,10 +156,6 @@ function flipCard(){
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-
-
-
-
 
 
 
